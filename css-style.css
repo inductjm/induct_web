@@ -379,9 +379,9 @@ main, header, footer {
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: 380px;
+  height: 500px; /* alto visible en pantallas grandes */
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
@@ -401,7 +401,8 @@ main, header, footer {
 /* Adaptable para móviles */
 @media (max-width: 768px) {
   .hero-slider {
-    height: 250px;
+    height: 300px; /* más bajo en móviles */
   }
 }
+
 

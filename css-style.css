@@ -378,7 +378,6 @@ main, header, footer {
 .hero-slider {
   position: relative;
   width: 100%;
-  max-width: 600px;
   height: 500px; /* alto visible en pantallas grandes */
   overflow: hidden;
   border-radius: 0px;
@@ -404,5 +403,6 @@ main, header, footer {
     height: 300px; /* más bajo en móviles */
   }
 }
+
 
 

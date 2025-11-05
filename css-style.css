@@ -415,7 +415,60 @@ main, header, footer {
     height: 300px; /* más bajo en móviles */
   }
 }
+/* === CARRUSEL DE IMÁGENES (HERO) === */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
 
+.hero-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
+.hero-slider img.active {
+  opacity: 1;
+}
 
+/* Botones del carrusel */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 24px;
+  z-index: 10;
+}
 
+.slider-btn:hover {
+  background: var(--accent);
+}
+
+.slider-btn.prev { left: 20px; }
+.slider-btn.next { right: 20px; }
+
+/* Adaptación móvil */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 320px;
+  }
+  .slider-btn {
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+}

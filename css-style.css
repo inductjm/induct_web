@@ -97,7 +97,7 @@ main, header, footer {
 }
 
 .brand-logo {
-  width: 180px;
+  width: 220px; /* más grande */
   height: auto;
   object-fit: contain;
   background: transparent;
@@ -375,3 +375,4 @@ main, header, footer {
   opacity: 1;
   position: relative;
 }
+

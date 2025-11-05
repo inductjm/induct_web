@@ -227,9 +227,24 @@
       form.reset();
     });
   </script>
+<script>
+  // === TRANSICIÓN DE IMÁGENES HERO ===
+  const sliderImages = document.querySelectorAll('.hero-slider img');
+  let current = 0;
+
+  function changeImage() {
+    sliderImages[current].classList.remove('active');
+    current = (current + 1) % sliderImages.length;
+    sliderImages[current].classList.add('active');
+  }
+
+  sliderImages[current].classList.add('active');
+  setInterval(changeImage, 4000); // cambia cada 4 segundos
+</script>
 
 </body>
 </html>
+
 
 
 

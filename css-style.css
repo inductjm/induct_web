@@ -179,18 +179,6 @@ body {
   margin-bottom: 20px;
   font-weight: 300;
 }
-<section class="hero-sello">
-  <div class="hero-slider" id="heroSlider">
-    <img src="img/slider1.jpg" alt="Instalación industrial" class="active">
-    <img src="img/slider2.jpg" alt="Conductos metálicos">
-    <img src="img/slider3.jpg" alt="Fabricación de ductos">
-    <img src="img/slider4.jpg" alt="Sistema de ventilación">
-    
-    <!-- Botones de navegación -->
-    <button class="slider-btn prev" id="prevBtn">&#10094;</button>
-    <button class="slider-btn next" id="nextBtn">&#10095;</button>
-  </div>
-</section>
 
 /* ========== BUTTONS ========== */
 .btn {
@@ -472,5 +460,6 @@ main, header, footer {
     font-size: 20px;
   }
 }
+
 
 

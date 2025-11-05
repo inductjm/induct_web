@@ -43,15 +43,6 @@ body {
   opacity: 0.98; /* leve transparencia del cuerpo (mantiene legibilidad) */
 }
 
-body {
-  font-family: var(--ff);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.45;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /* Container */
 .container {
   width: 90%;
@@ -342,9 +333,23 @@ body {
   .brand-logo { width: 42px; height: 42px; }
   .container { width: 94%; padding: 20px 0; }
   .hero { padding-top: 90px; }
+}
+
+/* 🔹 Marca de agua visible detrás del contenido */
 body::before {
-  background-size: 70%; /* sello más grande en móviles */
-  opacity: 0.06;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../img/sello.png") no-repeat center center;
+  background-size: 40%;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+main, header, footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* Mobile nav open */
@@ -363,3 +368,4 @@ body::before {
   gap: 10px;
   margin-top: 10px;
 }
+

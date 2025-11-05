@@ -47,7 +47,7 @@ body {
 
 /* ========== CONTAINERS ========== */
 .container {
-  width: 90%;
+  width: 100%;
   max-width: var(--maxW);
   margin: 0 auto;
   padding: 40px 0;
@@ -373,4 +373,5 @@ main, header, footer {
   position: relative;
   z-index: 1;
 }
+
 

@@ -15,6 +15,34 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
 </head>
+<script>
+  const slides = document.querySelectorAll('#heroSlider img');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  // Cambio automático cada 5 segundos
+  setInterval(nextSlide, 5000);
+</script>
 <body>
 
   <!-- HEADER -->
@@ -244,6 +272,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -374,3 +374,14 @@ main, header, footer {
   z-index: 1;
 }
 
+.hero-slider img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+.hero-slider img.active {
+  opacity: 1;
+  position: relative;
+}

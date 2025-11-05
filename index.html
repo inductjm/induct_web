@@ -1,283 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>INDUCT, S.A. — Innovación en conducción de aire</title>
-  <meta name="description" content="INDUCT, S.A. — Ingeniería, diseño y fabricación de ductos HVAC en Guatemala. Soluciones personalizadas, calidad y precisión industrial." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="INDUCT, S.A. — Innovación en conducción de aire industrial" />
+  <title>INDUCT | Innovación en Conducción de Aire</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css-style.css">
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="css/estilos.css" />
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="img/favicon.png" />
 </head>
-<script>
-  const slides = document.querySelectorAll('#heroSlider img');
-  const nextBtn = document.getElementById('nextBtn');
-  const prevBtn = document.getElementById('prevBtn');
-  let current = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-  }
-
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
-
-  function prevSlide() {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  }
-
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-
-  // Cambio automático cada 3 segundos
-  setInterval(nextSlide, 3000);
-</script>
 <body>
 
-  <!-- HEADER -->
-  <header id="site-header" class="header">
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
     <div class="container header-inner">
-      <a class="brand" href="#inicio">
-        <img src="logo.png" alt="Logo" class="brand-logo">
-        <span class="brand-text"></span>
+      <a href="#" class="brand">
+        <img src="img/logo.png" alt="Logo INDUCT" class="brand-logo">
+        <span class="brand-text">INDUCT, S.A.</span>
       </a>
 
-      <nav class="nav" id="main-nav">
-        <ul class="nav-list">
+      <nav class="nav">
+        <ul class="nav-list" id="navList">
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
           <li><a href="#productos">Productos</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
 
-      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+      <button class="nav-toggle" id="navToggle">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main>
-    <!-- HERO -->
-    <section id="inicio" class="hero hero-sello">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1 class="reveal">Diseño y fabricación de ductos para HVAC</h1>
-          <p class="lead">Fabricación profesional de ductos para aire acondicionado, con diseños personalizados, materiales de alta calidad y precisión en cada proyecto.</p>
-          <div class="hero-slider">
-  <img src="blanco.jpg" alt="ducto 1">
-  <img src="nestle.jpg" alt="ducto 2">
-  <img src="ductoequipo.png" alt="ducto 3">
-</div>
-          
-          <div class="hero-cta">
-            <a href="#contacto" class="btn btn-primary">Solicitar Cotización</a>
-            <a href="#productos" class="btn btn-outline">Ver Servicios</a>
-          </div>
+  <!-- ===== HERO CON SELLO Y SLIDER ===== -->
+  <section class="hero-sello" id="inicio">
+    <div class="hero-slider" id="heroSlider">
+      <img src="img/slider1.jpg" alt="Instalación industrial" class="active">
+      <img src="img/slider2.jpg" alt="Conductos metálicos">
+      <img src="img/slider3.jpg" alt="Fabricación de ductos">
+      <img src="img/slider4.jpg" alt="Sistema de ventilación">
+
+      <!-- Botones -->
+      <button class="slider-btn prev" id="prevBtn">&#10094;</button>
+      <button class="slider-btn next" id="nextBtn">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- ===== SECCIÓN SERVICIOS ===== -->
+  <section class="section section-dark" id="servicios">
+    <div class="container reveal">
+      <h2 class="section-title">Servicios Industriales</h2>
+      <p class="section-sub">Soluciones integrales en conducción de aire y ventilación.</p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Diseño de Ductos</h3>
+          <p>Planificación y modelado 3D de sistemas de ventilación eficientes.</p>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-box">MAQUINARIA • PRODUCCIÓN • PRECISIÓN</div>
+        <div class="card">
+          <h3>Fabricación Metálica</h3>
+          <p>Producción de ductos en acero galvanizado, inoxidable y aluminio.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- NOSOTROS -->
-    <section id="nosotros" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Innovación en conducción de aire</h2>
-        <p class="section-sub">En <strong>INDUCT</strong> somos especialistas en diseño, ingeniería y fabricación de ductos metálicos para sistemas HVAC, ofreciendo soluciones eficientes, duraderas y adaptadas a cada necesidad.</p>
-
-        <div class="grid grid-3">
-          <article class="card reveal">
-            <h3>Ingeniería</h3>
-            <p>Consultoría, análisis, desarrollo y gestión de proyectos con enfoque en optimización técnica.</p>
-          </article>
-
-          <article class="card reveal">
-            <h3>Diseño</h3>
-            <p>Diseños innovadores y personalizados que optimizan funcionalidad ergonómica y estética industrial.</p>
-          </article>
-
-          <article class="card reveal">
-            <h3>Fabricación</h3>
-            <p>Transformamos láminas de metal en ductos de alta precisión mediante maquinaria automatizada y controles de calidad.</p>
-          </article>
+        <div class="card">
+          <h3>Instalación Profesional</h3>
+          <p>Montaje técnico con estándares de seguridad industrial.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PRODUCTOS -->
-    <section id="productos" class="section section-dark">
-      <div class="container">
-        <h2 class="section-title reveal">Productos</h2>
-        <p class="section-sub">Soluciones y componentes para ventilación y climatización en distintos sectores.</p>
+  <!-- ===== SECCIÓN PRODUCTOS ===== -->
+  <section class="section" id="productos">
+    <div class="container reveal">
+      <h2 class="section-title">Productos Destacados</h2>
+      <p class="section-sub">Componentes de alto rendimiento para sistemas de aire industrial.</p>
 
-        <div class="grid grid-3 product-grid">
-          <article class="product-card reveal">
-            <h4>Conducto Liso</h4>
-            <p>Chapa galvanizada con superficie interior lisa que optimiza flujo y minimiza turbulencias.</p>
-          </article>
-
-          <article class="product-card reveal">
-            <h4>Conducto Rectangular</h4>
-            <p>Ideal para espacios con limitaciones de altura; integración arquitectónica y ahorro en ciertos casos.</p>
-          </article>
-
-          <article class="product-card reveal">
-            <h4>Conducto Doble</h4>
-            <p>Para suministro y extracción simultánea, mejorando la gestión térmica en edificaciones.</p>
-          </article>
-
-          <article class="product-card reveal">
-            <h4>Piezas Circulares & Accesorios</h4>
-            <p>Codos, adaptadores y accesorios para extracción de humos y distribución eficiente del aire.</p>
-          </article>
-
-          <article class="product-card reveal">
-            <h4>Compuertas de Regulación</h4>
-            <p>Control preciso del flujo de aire — iniciar, ajustar o detener el paso del aire.</p>
-          </article>
-
-          <article class="product-card reveal">
-            <h4>Esquineros TDF</h4>
-            <p>Refuerzo y unión hermética en esquinas de ductos bajo sistema TDF.</p>
-          </article>
-
-          <article class="product-card reveal">
-            <h4>Maquinaria Automatizada</h4>
-            <p>Equipos de última generación para producción eficiente y control dimensional.</p>
-          </article>
+      <div class="grid grid-3">
+        <div class="product-card">
+          <img src="img/prod1.jpg" alt="Difusor metálico" style="width:100%; border-radius:10px;">
+          <h4>Difusores Industriales</h4>
+          <p>Distribución uniforme del flujo de aire en áreas amplias.</p>
+        </div>
+        <div class="product-card">
+          <img src="img/prod2.jpg" alt="Conducto rectangular" style="width:100%; border-radius:10px;">
+          <h4>Ductos Rectangulares</h4>
+          <p>Construcción modular y adaptable a cualquier instalación.</p>
+        </div>
+        <div class="product-card">
+          <img src="img/prod3.jpg" alt="Rejillas metálicas" style="width:100%; border-radius:10px;">
+          <h4>Rejillas Metálicas</h4>
+          <p>Fabricadas a medida con acabados industriales.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Contáctanos</h2>
-        <p class="section-sub">¿Tienes un proyecto en mente? Nuestro equipo está listo para ayudarte.</p>
+  <!-- ===== SECCIÓN CONTACTO ===== -->
+  <section class="section section-dark" id="contacto">
+    <div class="container reveal">
+      <h2 class="section-title">Contáctanos</h2>
+      <p class="section-sub">Nuestro equipo técnico está listo para atenderte.</p>
 
-        <div class="grid grid-2">
-          <form class="contact-form reveal" id="contactForm" action="#" method="post" novalidate>
-            <label>Email *
-              <input type="email" name="email" placeholder="tu@correo.com" required>
-            </label>
-
-            <label>Nombre
-              <input type="text" name="name" placeholder="Tu nombre">
-            </label>
-
-            <label>Teléfono *
-              <input type="tel" name="phone" placeholder="+502 1234-5678" pattern="[0-9+\s\-]{7,20}" required>
-            </label>
-
-            <label>Mensaje
-              <textarea name="message" rows="5" placeholder="Describe tu proyecto..."></textarea>
-            </label>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Enviar</button>
-              <button type="reset" class="btn btn-outline">Limpiar</button>
-            </div>
-
-            <p class="form-note">Tu información es confidencial. Nunca compartiremos tus datos.</p>
-          </form>
-
-          <aside class="contact-info reveal">
-            <h3>Información</h3>
-            <p><strong>Ubicación:</strong><br>Km 19.5 Carretera Panamericana, Lote 7 12-40, Bodega 8, Guatemala, C.A.</p>
-            <p><strong>Teléfono:</strong><br><a href="tel:+50222534544">+502 2253-4544</a></p>
-            <p><strong>Servicios y sectores:</strong><br>Industrial • Comercial • Hospitalario • Residencial</p>
-
-            <div class="social">
-              <a href="https://www.facebook.com/share/16e66hK58L/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
-              <a href="https://www.instagram.com/induct_1" target="_blank" rel="noopener">Instagram</a>
-            </div>
-          </aside>
+      <form class="contact-form">
+        <label>Nombre
+          <input type="text" name="nombre" required>
+        </label>
+        <label>Correo electrónico
+          <input type="email" name="correo" required>
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <button type="reset" class="btn btn-outline">Limpiar</button>
         </div>
-      </div>
-    </section>
-  </main>
+      </form>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> INDUCT, S.A. Todos los derechos reservados.</div>
-      <div>Km 19.5 Carretera Panamericana, Eco-Bodegas, Bodega 8, Lote 7 12-40, Guatemala, C.A. · 
-        <a href="tel:+50222534544">+502 2253-4544</a></div>
+      <span>© 2025 INDUCT, S.A. — Innovación en Conducción de Aire</span>
+      <span>Diseño corporativo industrial</span>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
+  <!-- ===== JAVASCRIPT ===== -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const header = document.getElementById('site-header');
+    /* === NAV SCROLL EFFECT === */
     window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 30);
+      const header = document.getElementById('header');
+      header.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    const navToggle = document.getElementById('nav-toggle');
-    const mainNav = document.getElementById('main-nav');
+    /* === NAV TOGGLE (MOBILE) === */
+    const navToggle = document.getElementById('navToggle');
+    const navList = document.getElementById('navList');
     navToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
+      navList.classList.toggle('open');
       navToggle.classList.toggle('open');
     });
 
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(r => revealObserver.observe(r));
+    /* === SLIDER HERO === */
+    const slides = document.querySelectorAll('#heroSlider img');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    let index = 0;
 
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Formulario enviado (demo). Integra un servicio real para procesar los datos.');
-      form.reset();
-    });
+    function showSlide(i) {
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }
+
+    function prevSlideFunc() {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlideFunc);
+
+    setInterval(nextSlide, 6000); // cambio automático cada 6 segundos
   </script>
-<script>
-  // === TRANSICIÓN DE IMÁGENES HERO ===
-  const sliderImages = document.querySelectorAll('.hero-slider img');
-  let current = 0;
-
-  function changeImage() {
-    sliderImages[current].classList.remove('active');
-    current = (current + 1) % sliderImages.length;
-    sliderImages[current].classList.add('active');
-  }
-
-  sliderImages[current].classList.add('active');
-  setInterval(changeImage, 4000); // cambia cada 4 segundos
-</script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-

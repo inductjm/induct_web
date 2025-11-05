@@ -88,8 +88,9 @@ body {
 }
 
 .brand-logo {
-  width: 180px;
-  height: auto;
+  height: 80px; /* antes 40px */
+  width: auto;
+  transition: all 0.3s ease;
   object-fit: contain;
   background: transparent;
   box-shadow: none;
@@ -472,3 +473,4 @@ main, header, footer {
     font-size: 20px;
   }
 }
+

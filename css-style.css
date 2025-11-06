@@ -43,7 +43,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: var(--sello) no-repeat center center;
-  background-size: 40%;
+  background-size: 50%;
   opacity: 0.08;
   pointer-events: none;
   z-index: 0;
@@ -97,7 +97,7 @@ main, header, footer {
 }
 
 .brand-logo {
-  width: 220px; /* más grande */
+  width: 300px; /* más grande */
   height: auto;
   object-fit: contain;
   background: transparent;
@@ -326,14 +326,14 @@ main, header, footer {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
-@media (max-width: 980px) {
+@media (max-width: 800px) {
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .hero-inner { flex-direction: column; text-align: center; gap: 20px; }
   .hero h1 { font-size: 28px; }
   .grid-2 { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 600px) {
   .nav-list { display: none; }
   .nav-toggle { display: flex; }
   .brand-text { display: none; }
@@ -354,7 +354,7 @@ main, header, footer {
   position: absolute;
   inset: 0;
   background: var(--sello) no-repeat center center;
-  background-size: 40%;
+  background-size: 50%;
   opacity: 0.08;
   pointer-events: none;
   z-index: 0;
@@ -370,7 +370,7 @@ main, header, footer {
 
   /* Tamaño fijo sugerido */
   width: 100%;        /* ocupa todo el ancho del contenedor */
-  height: 480px;      /* o el alto que quieras */
+  height: 300px;      /* o el alto que quieras */
   object-fit: cover;  /* recorta y centra sin deformar */
   border-radius: 12px; /* opcional: bordes suaves */
 }
@@ -396,3 +396,4 @@ main, header, footer {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.15);
 }
+

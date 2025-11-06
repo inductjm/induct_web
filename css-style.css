@@ -385,7 +385,8 @@ main, header, footer {
 
   /* Tamaño fijo sugerido */
   width: 100%;        /* ocupa todo el ancho del contenedor */
-  height: 480px;      /* o el alto que quieras */
+  height: auto;      /* o el alto que quieras */
+  max-height: 480px; /* limita altura máxima sin deformar */
   object-fit: cover;  /* recorta y centra sin deformar */
   border-radius: 12px; /* opcional: bordes suaves */
 }
@@ -412,4 +413,8 @@ main, header, footer {
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.15);
 }
 
-
+img {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+}

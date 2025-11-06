@@ -380,6 +380,19 @@ main, header, footer {
   position: relative;
 }
 
+/* ===== IMÁGENES EN TARJETAS ===== */
+.card img,
+.product-card img {
+  display: block;
+  width: 100%;
+  max-height: 220px; /* puedes ajustar según el diseño */
+  object-fit: cover; /* mantiene proporciones sin deformar */
+  border-radius: 10px;
+  margin-top: 10px;
+  background: transparent;
+}
 
-
-
+.card img {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.15);
+}

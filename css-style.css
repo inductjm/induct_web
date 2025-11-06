@@ -97,7 +97,7 @@ main, header, footer {
 }
 
 .brand-logo {
-  width: 200px; /* más grande */
+  width: 220px; /* más grande */
   height: auto;
   object-fit: contain;
   background: transparent;
@@ -368,11 +368,12 @@ main, header, footer {
   transition: opacity 1s ease-in-out;
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .hero-slider img.active {
   opacity: 1;
   position: relative;
 }
+
 

@@ -367,14 +367,19 @@ main, header, footer {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   position: absolute;
-  width: auto;
-  height: auto;
+
+  /* Tamaño fijo sugerido */
+  width: 100%;        /* ocupa todo el ancho del contenedor */
+  height: 480px;      /* o el alto que quieras */
+  object-fit: cover;  /* recorta y centra sin deformar */
+  border-radius: 12px; /* opcional: bordes suaves */
 }
 
 .hero-slider img.active {
   opacity: 1;
   position: relative;
 }
+
 
 
 

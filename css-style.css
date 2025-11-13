@@ -63,6 +63,75 @@ main, header, footer { position: relative; z-index: 1; }
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
 }
+/* NAVBAR FIX: Alinear correctamente logo + menú */
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-list li {
+  display: flex;
+  align-items: center;
+}
+
+/* Ajuste visual de los botones (Inicio, Nosotros, etc.) */
+.nav-list a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 160ms, transform 160ms;
+}
+
+.nav-list a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ====== RESPONSIVE NAVBAR ====== */
+@media (max-width: 680px) {
+  .header .container {
+    flex-wrap: wrap;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list a {
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 /* BRAND */
 .brand { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; }
@@ -249,3 +318,4 @@ main, header, footer { position: relative; z-index: 1; }
   .brand-logo { width: 140px; }
   .hero { padding-top: 110px; }
 }
+
